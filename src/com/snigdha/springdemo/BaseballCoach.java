@@ -1,0 +1,30 @@
+package com.snigdha.springdemo;
+
+public class BaseballCoach implements Coach {
+	
+	//define a private field for the dependency
+	private FortuneService fortuneService;
+	
+	//define a constructor for dependency injection
+	public BaseballCoach(FortuneService theFortuneService) {
+		
+		fortuneService = theFortuneService;
+	}
+	
+	
+	@Override 
+	//@Override annotation is used to specify that we have overridden this method
+	public String getDailyWorkout() {
+		return "Spend 30 minutes on batting practice";
+		
+	}
+
+	@Override
+	//This method is for Dependency Injection Demonstration
+	public String getDailyFortune() {
+		
+		//use my fortuneService to get a fortune
+		
+		return "Baseball Player "+fortuneService.getFortune();
+	}
+}
