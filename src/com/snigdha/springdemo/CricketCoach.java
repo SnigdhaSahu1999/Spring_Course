@@ -11,7 +11,7 @@ public class CricketCoach implements Coach {
 	
 	//setter method that will be called by spring for Dependency Injection
 	public void setFortuneService(FortuneService fortuneService) {
-		System.out.println("CricketCoach: inside setter method");
+		System.out.println("CricketCoach: inside setter method - setFortuneService");
 		this.fortuneService = fortuneService;
 	}
 	
@@ -25,7 +25,8 @@ public class CricketCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		
-		return "CricketCoach: "+fortuneService.getFortune();
+		return "CricketCoach: "+fortuneService.getFortune();   
+		//fortuneService.getFortune() calls getFortune() of HappyFortuneService class
 	}
 
 }

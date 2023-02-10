@@ -48,8 +48,8 @@
     <bean id = "myCricketCoach"
     	  class = "com.snigdha.springdemo.CricketCoach">
     	  
-    	  <!-- Set up our setter injection -->
-    	  <property name="" ref="myFortuneService"/>
+    	  <!-- Set up our setter injection, calls setter method of the CricketCoach class -->
+    	  <property name="fortuneService" ref="myFortuneService"/>
     </bean>
     
     
