@@ -68,7 +68,8 @@
     
     <!--  Practice Activity #2 -->
     <bean id = "myCoach2"
-    	  class = "com.snigdha.springdemo.BadmintonCoach">
+    	  class = "com.snigdha.springdemo.BadmintonCoach"
+    	  scope="prototype">
     	  
     	  <!-- Set up constructor injection -->
     	  <constructor-arg ref = "myFortuneService"/>
