@@ -12,9 +12,10 @@ public class HappyFortuneService implements FortuneService {
 	}
 	
 	//Practice Activity #2
+	private String arr[] = {"Today is your best day!", "Best Of Luck!", "May you win the match."};
+	private Random random = new Random();
 	public String getRandomFortune() {
-		String arr[] = {"Today is your best day!", "Best Of Luck!", "May you win the match."};
-		Random random = new Random();
+		
 		int index = random.nextInt(arr.length);
 		return (arr[index]);
 	}

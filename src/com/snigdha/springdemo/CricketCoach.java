@@ -52,4 +52,10 @@ public class CricketCoach implements Coach {
 		//fortuneService.getFortune() calls getFortune() of HappyFortuneService class
 	}
 
+	@Override
+	public String getDailyRandomFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
