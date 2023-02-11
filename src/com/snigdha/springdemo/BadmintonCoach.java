@@ -20,4 +20,12 @@ public class BadmintonCoach implements Coach {
 		
 		return "BadmintonCoach: "+fortuneService.getFortune();
 	}
+	
+	//Practice Activity #2
+	@Override
+	public String getDailyRandomFortune() {
+		//use my fortuneService to get a fortune
+		
+		return "BadmintonCoach: "+fortuneService.getRandomFortune();
+	}
 }

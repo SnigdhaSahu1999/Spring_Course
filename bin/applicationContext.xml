@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <!-- load the properties file: sport.properties -->
+    <!-- loading the properties file: sport.properties -->
     <context:property-placeholder location = "classpath:sport.properties"/>
     
     
@@ -42,6 +42,7 @@
     	  class = "com.snigdha.springdemo.BaseballCoach">
     </bean>
     
+    //Practice Activity #1
     <bean id = "myCoach2"
     	  class = "com.snigdha.springdemo.BadmintonCoach">
     </bean> -->
@@ -63,6 +64,14 @@
     	  <!-- Inject literal values by properties file -->
     	  <property name="emailAddress" value="${foo.email}"/>
     	  <property name="team" value="${foo.team}"/> 
+    </bean>
+    
+    <!--  Practice Activity #2 -->
+    <bean id = "myCoach2"
+    	  class = "com.snigdha.springdemo.BadmintonCoach">
+    	  
+    	  <!-- Set up constructor injection -->
+    	  <constructor-arg ref = "myFortuneService"/>
     </bean>
     
     

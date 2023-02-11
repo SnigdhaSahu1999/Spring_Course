@@ -8,4 +8,7 @@ public interface Coach {
 	//Dependency Injection Example
 	public String getDailyFortune();
 	
+	//Practice Activity #2
+	public String getDailyRandomFortune();
+	
 }

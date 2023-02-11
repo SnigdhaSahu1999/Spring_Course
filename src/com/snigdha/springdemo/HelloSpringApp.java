@@ -23,9 +23,15 @@ public class HelloSpringApp {
 		
 		
 		//Call methods for Dependency Injection Demonstration
-		Coach myTrackCoach = context.getBean("myTCoach",Coach.class);
+		/*Coach myTrackCoach = context.getBean("myTCoach",Coach.class);
 		System.out.println(myTrackCoach.getDailyWorkout());
-		System.out.println(myTrackCoach.getDailyFortune());
+		System.out.println(myTrackCoach.getDailyFortune());*/
+		
+		//Practice Activity #2
+		Coach theBadmintonCoach = context.getBean("myCoach2",Coach.class);
+		System.out.println(theBadmintonCoach.getDailyWorkout());
+		System.out.println(theBadmintonCoach.getDailyFortune());
+		System.out.println(theBadmintonCoach.getDailyRandomFortune());
 		// close the context
 		context.close();
 	}
