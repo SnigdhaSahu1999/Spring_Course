@@ -7,6 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+    <!-- load the properties file: sport.properties -->
+    <context:property-placeholder location = "classpath:sport.properties"/>
+    
+    
     <!-- Define the dependency bean (Dependency Injection Example)-->
     
     <!-- Creation of HappyFortuneService Object -->
@@ -48,8 +52,17 @@
     <bean id = "myCricketCoach"
     	  class = "com.snigdha.springdemo.CricketCoach">
     	  
-    	  <!-- Set up our setter injection, calls setter method of the CricketCoach class -->
+    	  <!-- Set up our setter injection, calls setFortuneService() setter method of the CricketCoach class -->
     	  <property name="fortuneService" ref="myFortuneService"/>
+    	  
+    	  <!-- Hard Coded -->
+    	  <!-- inject literal values, calls setEmailAddress,setTeam setter methods of the CricketCoach class -->
+    	 <!-- <property name="emailAddress" value="thesnigdhasahu@gmail.com"/>
+    	  <property name="team" value="Sunrisers Hyderabad"/>   -->
+    	  
+    	  <!-- Inject literal values by properties file -->
+    	  <property name="emailAddress" value="${foo.email}"/>
+    	  <property name="team" value="${foo.team}"/> 
     </bean>
     
     
