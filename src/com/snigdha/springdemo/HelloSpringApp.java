@@ -33,7 +33,7 @@ public class HelloSpringApp {
 		System.out.println(theBadmintonCoach.getDailyFortune());
 		System.out.println(theBadmintonCoach.getDailyRandomFortune());*/
 		
-		////Practice Activity #3
+		//Practice Activity #3
 		Coach theBadmintonCoach = context.getBean("myCoach2",Coach.class);
 		Coach theBadCoach = context.getBean("myCoach2",Coach.class);
 		boolean result = (theBadmintonCoach == theBadCoach);
